@@ -149,9 +149,9 @@ app.use((err, req, res, next) => {
   // res.status(statusCode).send(message);
   res.status(statusCode).render("listings/error.ejs", { message });
 });
-app.get("/", (req, res) => {
-  res.send("server is working");
-});
+// app.get("/", (req, res) => {
+//   res.send("server is working");
+// });
 app.listen(3000, () => {
   console.log("server is listening at port 3000");
 });
