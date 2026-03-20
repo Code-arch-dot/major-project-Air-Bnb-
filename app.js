@@ -117,15 +117,15 @@ app.use("/", userRouter);
 
 
 
-//  app.get("/listings", async (req, res) => {
-//   try {
-//     const listings = await Listing.find(); // example
-//     res.render('listings/index.ejs', { listings });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send('Internal Server Error');
-//   }
-// });
+ app.get("/listings", async (req, res) => {
+  try {
+    const listings = await Listing.find(); // example
+    res.render('listings/index.ejs', { listings });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
 // app.get("/testListing",async (req,res)=>{
 //    let sampleListing = new Listing({
