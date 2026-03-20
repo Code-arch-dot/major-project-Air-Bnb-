@@ -110,6 +110,10 @@ const validateReview = (req, res, next) => {
 //   res.send(registeredUser);
 // });
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
@@ -152,9 +156,13 @@ app.use((err, req, res, next) => {
 // app.get("/", (req, res) => {
 //   res.send("server is working");
 // });
-app.get("/", (req, res) => {
-  res.render("listings/index.ejs");
-});
-app.listen(3000, () => {
-  console.log("server is listening at port 3000");
+
+// app.listen(3000, () => {
+//   console.log("server is listening at port 3000");
+// });
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("server is listening at port", PORT);
 });
