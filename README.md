@@ -1,3 +1,3 @@
 # major-project-Air-Bnb-
-This is full-stack project.
+Airbnb Listing Website is a one‑stop platform to browse, book, and host unique stays worldwide.
 
